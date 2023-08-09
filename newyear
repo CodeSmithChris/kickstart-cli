@@ -1,0 +1,60 @@
+#!/usr/bin/env bash
+##
+## Remove the ## from each 'echo' line to check values of variables
+##
+
+## Setting array of days
+day[0]="Sunday"
+day[1]="Monday"
+day[2]="Tuesday"
+day[3]="Wednesday"
+day[4]="Thursday"
+day[5]="Friday"
+day[6]="Saturday"
+day[7]="Sunday"
+
+## Taking in specified year
+
+printf "Which year: "
+read input
+year=${input}
+
+lastTwo=$(("${input}" - 2000))
+## echo "Last two digits of the year: "${lastTwo}""
+
+quarter=$(echo "scale=1; ${lastTwo}/10 + ${lastTwo}/10 + ${lastTwo}/20" | bc)
+## echo "25% of last two digitd: "${quarter}""
+
+quarterInt=${quarter%%.*}
+## echo "25% dropping the fractional: "${quarterInt}""
+
+if [ -z "${quarterInt}" ]; then
+	quarterInt=0
+fi
+
+multiple=$(("${lastTwo}" + "${quarterInt}"))
+## echo "Multiple:  "${multiple}""
+
+value=$(("${multiple}" % 7))
+## echo "Day value: "${value}"
+
+## Checking for leap years
+
+if (( "${lastTwo}" % 4 == 0 )); then
+	value=$(("${value}" - 1))
+fi
+
+if (( "${value}" < 0 )); then
+    value=6
+fi
+
+## echo "Day value: "${value}""
+
+index=0
+while [ $index -lt $value ]; do
+        let index=index+1
+done
+
+printf "January 1st %d falls on: %s\n" "${year}" "${day[${index}]}"
+
+exit
