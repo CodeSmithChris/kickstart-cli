@@ -1,5 +1,6 @@
+#!/bin/bash
 
-n to check if a program is installed
+#Function to check if a program is installed
 is_installed() {
     command -v "$1" >/dev/null 2>&1
 }
@@ -20,6 +21,12 @@ fi
 if ! is_installed starship; then
     echo "Installing starship..."
     sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+fi
+
+# Install fontconfig
+if ! is_installed fontconfig; then
+	echo "Installing fontconfig..."
+	sudo apt-get install fontconfig -y
 fi
 
 # Install git
