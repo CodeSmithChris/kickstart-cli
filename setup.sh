@@ -1,8 +1,12 @@
-#!/bin/bash
 
-# Function to check if a program is installed
+n to check if a program is installed
 is_installed() {
     command -v "$1" >/dev/null 2>&1
+}
+
+# Create ~/.config directory if it doesn't exist
+create_config_directory() {
+    mkdir -p "$HOME/.config"
 }
 
 # Install curl
@@ -28,7 +32,7 @@ fi
 if ! is_installed tldr; then
     echo "Installing tldr..."
     sudo apt-get install tldr -y
-	echo "tldr -u"
+    tldr --update
 fi
 
 # Install autojump
@@ -39,32 +43,32 @@ fi
 
 # Install neofetch
 if ! is_installed neofetch; then
-	echo "Installing neofetch..."
-	sudo apt-get install neofetch -y
+    echo "Installing neofetch..."
+    sudo apt-get install neofetch -y
 fi
 
 # Install btop
 if ! is_installed btop; then
-	echo "Installing btop..."
-	sudo apt-get install btop -y
+    echo "Installing btop..."
+    sudo apt-get install btop -y
 fi
 
 # Install vim
 if ! is_installed vim; then
-	echo "Installing vim..."
-	sudo apt-get install vim -y
+    echo "Installing vim..."
+    sudo apt-get install vim -y
 fi
 
 # Install sc
 if ! is_installed sc; then
-	echo "Installing sc..."
-	sudo apt-get install sc -y
+    echo "Installing sc..."
+    sudo apt-get install sc -y
 fi
 
 # Install bc
 if ! is_installed bc; then
-	echo "Installing bc..."
-	sudo apt-get install bc -y
+    echo "Installing bc..."
+    sudo apt-get install bc -y
 fi
 
 # Create ~/.fonts directory if it doesn't exist
@@ -93,20 +97,12 @@ echo "Beginning configurations"
 # Create ~/.config directory if it doesn't exist
 create_config_directory
 
-# Creation of starship.toml
-cat .config/starship.toml > ~/.config/starship.toml
-
-# Creation of .bash_aliases
-cat bash/.bash_aliases > ~/.bash_aliases
-
-#Creation of .bash_functions
-cat bash/.bash_functions > ~/.bash_functions
-
-# Creation of simple .bashrc
-cat bash/.bashrc > ~/.bashrc
-
-# Creation of .vimrc
-cat .config/.vimrc > ~/.vimrc
+# Copy configuration files from the repository to their respective locations
+cp ".config/starship.toml" "$HOME/.config/starship.toml"
+cp "bash/.bash_aliases" "$HOME/.bash_aliases"
+cp "bash/.bash_functions" "$HOME/.bash_functions"
+cp "bash/.bashrc" "$HOME/.bashrc"
+cp ".config/.vimrc" "$HOME/.vimrc"
 
 echo "Configuration complete."
 
