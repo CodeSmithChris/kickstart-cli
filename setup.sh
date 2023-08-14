@@ -40,7 +40,6 @@ fi
 if ! is_installed tldr; then
     echo "Installing tldr..."
     sudo apt install tldr -y
-	tldr --update
 fi
 
 # Install autojump
@@ -112,7 +111,8 @@ cp ".config/.vimrc" "$HOME/.vimrc"
 
 echo "Configuration complete."
 
-# Source updated .bashrc to apply changed immediately
-source "$HOME/.bashrc"
+#Running other script to source the bashrc and utilize tldr
+chmod +x scripts/sourcer.sh
+./scripts/sourcer.sh
 
 exit
