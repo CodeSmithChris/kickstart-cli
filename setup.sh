@@ -13,33 +13,34 @@ create_config_directory() {
 # Install curl
 if ! is_installed curl; then
     echo "Installing curl..."
-    sudo apt-get update
-    sudo apt-get install curl -y
+    sudo apt update
+    sudo apt install curl -y
 fi
 
 # Install starship
 if ! is_installed starship; then
     echo "Installing starship..."
-    sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+	curl -sS https://starship.rs/install.sh | sh
+	sudo apt update
 fi
 
 # Install fontconfig
 if ! is_installed fontconfig; then
 	echo "Installing fontconfig..."
-	sudo apt-get install fontconfig -y
+	sudo apt install fontconfig -y
 fi
 
 # Install git
 if ! is_installed git; then
     echo "Installing git..."
-    sudo apt-get install git -y
+    sudo apt install git -y
 fi
 
 # Install tldr
 if ! is_installed tldr; then
     echo "Installing tldr..."
-    sudo apt-get install tldr -y
-    tldr --update
+    sudo apt install tldr -y
+	tldr -u
 fi
 
 # Install autojump
@@ -51,32 +52,34 @@ fi
 # Install neofetch
 if ! is_installed neofetch; then
     echo "Installing neofetch..."
-    sudo apt-get install neofetch -y
+    sudo apt install neofetch -y
 fi
 
 # Install btop
 if ! is_installed btop; then
     echo "Installing btop..."
-    sudo apt-get install btop -y
+    sudo apt install btop -y
 fi
 
 # Install vim
 if ! is_installed vim; then
     echo "Installing vim..."
-    sudo apt-get install vim -y
+    sudo apt install vim -y
 fi
 
 # Install sc
 if ! is_installed sc; then
     echo "Installing sc..."
-    sudo apt-get install sc -y
+    sudo apt install sc -y
 fi
 
 # Install bc
 if ! is_installed bc; then
     echo "Installing bc..."
-    sudo apt-get install bc -y
+    sudo apt install bc -y
 fi
+
+echo "sudo apt update && upgrade"
 
 # Create ~/.fonts directory if it doesn't exist
 if [ ! -d "$HOME/.fonts" ]; then
@@ -112,5 +115,8 @@ cp "bash/.bashrc" "$HOME/.bashrc"
 cp ".config/.vimrc" "$HOME/.vimrc"
 
 echo "Configuration complete."
+
+# Source updated .bashrc to apply changed immediately
+source "~/.bashrc"
 
 exit
