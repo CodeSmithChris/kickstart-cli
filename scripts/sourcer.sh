@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-source "$HOME/.bashrc"
+source ~/.bashrc
 
 sudo hwclock -s
 
