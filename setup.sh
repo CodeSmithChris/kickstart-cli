@@ -85,16 +85,16 @@ create_config_directory
 cat .config/starship.toml > ~/.config/starship.toml
 
 # Creation of .bash_aliases
-cat .bash_aliases > ~/.bash_aliases
+cat bash/.bash_aliases > ~/.bash_aliases
 
 #Creation of .bash_functions
-cat .bash_functions > ~/.bash_functions
+cat bash/.bash_functions > ~/.bash_functions
 
 # Creation of simple .bashrc
-cat .bashrc > ~/.bashrc
+cat bash/.bashrc > ~/.bashrc
 
 # Creation of .vimrc
-cat .vimrc > ~/.vimrc
+cat .config/.vimrc > ~/.vimrc
 
 echo "Configuration complete."
 

@@ -8,13 +8,10 @@ alias aptin='sudo apt install'
 alias aptrm='sudo apt remove'
 
 # ls with all flags
-alias ls='ls -lah --color=auto'
+alias ls='ls -lAh --color=auto'
 
 # mkdir create parents
 alias mkdir='mkdir -pv'
-
-# force nvim superiority
-alias vim='nvim'
 
 # confirmations
 alias mv='mv -i'
@@ -32,9 +29,8 @@ alias playmov='vlc *.mov'
 alias playmp4='vlc *.mp4'
 
 # navigation
-alias web='cd ~/GitHub/personal-projects/WebProject'
 alias bd='cd "$OLDPWD"'
 
-# edit bashrc
-alias ebrc='nvim ~/.bashrc'
+# edit bash aliases
+alias eba='vim ~/.bash_aliases'
 
