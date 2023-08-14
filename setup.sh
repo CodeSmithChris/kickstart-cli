@@ -40,7 +40,7 @@ fi
 if ! is_installed tldr; then
     echo "Installing tldr..."
     sudo apt install tldr -y
-	tldr -u
+	tldr --update
 fi
 
 # Install autojump
@@ -79,7 +79,6 @@ if ! is_installed bc; then
     sudo apt install bc -y
 fi
 
-echo "sudo apt update && upgrade"
 
 # Create ~/.fonts directory if it doesn't exist
 if [ ! -d "$HOME/.fonts" ]; then
@@ -101,9 +100,6 @@ fi
 
 echo "Installations complete"
 
-# Setup of configurations
-echo "Beginning configurations"
-
 # Create ~/.config directory if it doesn't exist
 create_config_directory
 
@@ -117,6 +113,6 @@ cp ".config/.vimrc" "$HOME/.vimrc"
 echo "Configuration complete."
 
 # Source updated .bashrc to apply changed immediately
-source "~/.bashrc"
+source "$HOME/.bashrc"
 
 exit
