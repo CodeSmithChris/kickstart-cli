@@ -55,6 +55,12 @@ if ! is_installed vim; then
 	sudo apt-get install vim -y
 fi
 
+# Install sc
+if ! is_installed sc; then
+	echo "Installing sc..."
+	sudo apt-get install sc -y
+fi
+
 # Create ~/.fonts directory if it doesn't exist
 if [ ! -d "$HOME/.fonts" ]; then
     echo "Creating ~/.fonts directory..."
