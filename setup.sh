@@ -61,6 +61,12 @@ if ! is_installed sc; then
 	sudo apt-get install sc -y
 fi
 
+# Install bc
+if ! is_installed bc; then
+	echo "Installing bc..."
+	sudo apt-get install bc -y
+fi
+
 # Create ~/.fonts directory if it doesn't exist
 if [ ! -d "$HOME/.fonts" ]; then
     echo "Creating ~/.fonts directory..."
