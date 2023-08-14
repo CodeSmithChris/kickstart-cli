@@ -2,7 +2,9 @@ To use the setup script make sure to run from inside the
 main configs repo
 
 pwd should return ~/.../configs
-run sudo ./setup.sh
+chmod +x setup.sh
+./setup.sh
+follow the prompts
 
 After the script completes feel free to delete this repo if desired
 
