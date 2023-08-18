@@ -1,11 +1,41 @@
-To use the setup script make sure to run from inside the 
-main configs repo
+## How to use ##
+Make sure to run from inside the /configs/ directory
+Using pwd should return ~/.../configs
+From within that directory perform the following commands:
 
-pwd should return ~/.../configs
 chmod +x setup.sh
-./setup.sh
-follow the prompts
+sudo ./setup.sh
+
+Then simply follow the prompt
 
 After the script completes feel free to delete this repo if desired
 
+## Note ##
+There is a slight issue with some distro's not refreshing the bashrc automatically.
+At the end of the script. Either use the command `source ~/.bashrc` or exit and reopen the terminal 
 
+
+#### Setup Contents ####
+
+## Installed programs ##
+curl		## Used similarly to apt
+starship	## Used for adjusting the appearance of prompt
+fontconfig	## Used along with starship
+git			## Likely already installed, used for version control
+tldr		## Used similarly to the command <man> 
+autojump	## Used for quick movement through directories i.e. j configs
+neofetch	## Displays system hardware & OS
+btop		## Displays running programs & system resources
+vim			## Terminal text editor
+sc			## Terminal based spreadsheet
+bc			## Terminal based binary calculator
+
+## Other Installed ##
+Meslo Nerd Fonts	## Directory ~/.fonts/ created to hold fonts
+
+## Files altered ##
+.bashrc			## Refrences starship to change prompt appearance
+.bash_aliases	## Creates file specifically for aliases
+.bash_functions	## Creates file specifically for functions
+.vimrc			## Creates file dictating appearance and funtionality inside vim
+.config/starship.toml	## Creates directory ~/.config/ along with starship file dictating appearance
