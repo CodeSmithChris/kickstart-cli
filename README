@@ -1,3 +1,8 @@
+## Note ##
+If program is already installed the script should automatically skip
+All files altered are completely overwritten. It would be wise to back up any existing 
+files prior to running the script
+
 ## How to use ##
 Make sure to run from inside the /configs/ directory
 Using pwd should return ~/.../configs
@@ -10,8 +15,8 @@ Then simply follow the prompt
 
 After the script completes feel free to delete this repo if desired
 
-## Note ##
-There is a slight issue with some distro's not refreshing the bashrc automatically.
+## Known Issue ##
+With some distro's not refreshing the bashrc automatically.
 At the end of the script. Either use the command `source ~/.bashrc` or exit and reopen the terminal 
 
 
