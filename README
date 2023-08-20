@@ -34,6 +34,8 @@ btop		## Displays running programs & system resources
 vim			## Terminal text editor
 sc			## Terminal based spreadsheet
 bc			## Terminal based binary calculator
+gcc			## Terminal compiler for c programs
+g++			## Terminal compiler for c++ programs
 
 ## Other Installed ##
 Meslo Nerd Fonts	## Directory ~/.fonts/ created to hold fonts
