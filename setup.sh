@@ -78,6 +78,17 @@ if ! is_installed bc; then
     sudo apt install bc -y
 fi
 
+# Install gcc
+if ! is_installed gcc; then
+	echo "Installing gcc..."
+	sudo apt install gcc -y
+fi
+
+# Install g++
+if ! is_installed g++; then
+	echo "Installing g++..."
+	sudo apt install g++ -y
+fi
 
 # Create ~/.fonts directory if it doesn't exist
 if [ ! -d "$HOME/.fonts" ]; then
