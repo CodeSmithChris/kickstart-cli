@@ -90,6 +90,12 @@ if ! is_installed g++; then
 	sudo apt install g++ -y
 fi
 
+# Install jdk
+if ! is_installed default-jdk; then
+	echo "Installing deafult-jdk..."
+	sudo apt install default-jdk -y
+fi
+
 # Create ~/.fonts directory if it doesn't exist
 if [ ! -d "$HOME/.fonts" ]; then
     echo "Creating ~/.fonts directory..."
