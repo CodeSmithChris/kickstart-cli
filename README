@@ -36,6 +36,7 @@ sc			## Terminal based spreadsheet
 bc			## Terminal based binary calculator
 gcc			## Terminal compiler for c programs
 g++			## Terminal compiler for c++ programs
+default-jdk	## Java Development Kit, allows for creation, compiling and running of java source code
 
 ## Other Installed ##
 Meslo Nerd Fonts	## Directory ~/.fonts/ created to hold fonts
