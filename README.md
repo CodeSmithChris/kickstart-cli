@@ -5,15 +5,14 @@
 - .bashrc will not automatically source. please run `source ~/.bashrc` upon completion
 
 ## How to use ##
-Run from inside the /configs/ directory 
-Using `pwd` should return `~/.../configs`
-From within that directory perform the following commands:
-
-`chmod +x kickstart-cli.sh`
-`sudo ./kickstart-cli.sh`
+- Run from inside the /configs/ directory 
+- Using `pwd` should return `~/.../configs`
+- From within that directory perform the following commands:
+- `chmod +x kickstart-cli.sh`
+- `sudo ./kickstart-cli.sh`
 
 You'll be met with the initial prompt of Y or N and the script will autocomplete after that.
-Once the script completes feel free to delete this repo if desired
+Once the script completes feel free to delete this repo if desired.
 
 #### Setup Contents ####
 
