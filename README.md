@@ -1,6 +1,6 @@
-# Rudimentary cli-kickstart script
-## Note ##
-- This script will overwrite various files, you may want to create a backup of them; files listed at bottom of Readme
+<h1> Rudimentary cli-kickstart script </h1>
+<h2> Note </h2>
+- This script will overwrite various files, you may want to create a backup of them.
 - There are several known issues when trying to run this script on Raspian version Buster
 - .bashrc will not automatically source. please run `source ~/.bashrc` upon completion
 
@@ -34,14 +34,10 @@ Once the script completes feel free to delete this repo if desired
 | g++ | Terminal compiler for c++ programs |
 | default-jdk | Java Development Kit, allows for creation, compiling and running of java source code |
 
----
-
 | Other Installed | Description |
 |-----------------|-------------|
 | Meslo Nerd Fonts | For use with new prompt appearance |
 | Directory `~/.fonts/` | created to hold fonts |
-
----
 
 | Files altered | Description |
 |---------------|-------------|
@@ -53,7 +49,7 @@ Once the script completes feel free to delete this repo if desired
 
 ---
 
-# Other Contents
+<h1> Other Contents </h1>
 
 Repo holds config files for the following:
 Kitty Terminal Emulator
