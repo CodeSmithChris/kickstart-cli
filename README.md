@@ -1,5 +1,5 @@
 <h1> Rudimentary cli-kickstart script </h1>
-<h2> Note </h2>
+## Note ##
 - This script will overwrite various files, you may want to create a backup of them.
 - There are several known issues when trying to run this script on Raspian version Buster
 - .bashrc will not automatically source. please run `source ~/.bashrc` upon completion
