@@ -6,8 +6,8 @@
 - .bashrc will not automatically source. please run `source ~/.bashrc` upon completion
 
 ## How to use ##
-- Run from inside the /configs/ directory 
-- Using `pwd` should return `~/.../configs`
+- Run from inside the /kickstart-cli/ directory 
+- Using `pwd` should return `~/.../kickstart-cli`
 - From within that directory perform the following commands:
 - `chmod +x kickstart-cli.sh`
 - `sudo ./kickstart-cli.sh`
