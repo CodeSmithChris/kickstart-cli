@@ -1,5 +1,4 @@
 :syntax on
-:set number
-:set cursorline
+:set relativenumber
 :set tabstop=4
 :set shiftwidth=4
