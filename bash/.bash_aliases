@@ -22,28 +22,8 @@ alias cp='cp -i'
 alias rm='rm -i'
 alias ln='ln -i'
 
-# force nvim
-alias vim='nvim'
-
-# neofetch
-alias neofetch='neofetch --ascii ~/Downloads/neo.txt'
-
-# audio
-alias playwav='rhythembox *.wav'
-alias playmp3='rhythembox *.mp3'
-
-# video
-alias playavi='vlc *.avi'
-alias playmov='vlc *.mov'
-alias playmp4='vlc *.mp4'
-
 # navigation
-alias web='cd ~/repos/github/web'
 alias bd='cd "$OLDPWD"'
-alias Java='cd ~/repos/github/CSCS2420F23/'
-alias Data='cd ~/repos/lab46/src/fall2023/data'
-alias Discrete='cd ~/repos/lab46/src/fall2023/discrete'
-alias PCT='cd ~/repos/lab46/src/fall2023/pct'
 
 # version control
 alias gcommit='git commit -m'
