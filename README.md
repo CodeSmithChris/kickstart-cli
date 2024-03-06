@@ -2,6 +2,7 @@
 
 ## Note ##
 - This script will overwrite various files, you may want to create a backup of them.
+- Make sure you perform an update prior to running this script. 
 - There are several known issues when trying to run this script on Raspian version Buster
 - .bashrc will not automatically source. please run `source ~/.bashrc` upon completion
 
@@ -32,7 +33,6 @@ Once the script completes feel free to delete this repo if desired.
 | bc | Terminal based binary calculator |
 | gcc | Terminal compiler for c programs |
 | g++ | Terminal compiler for c++ programs |
-| default-jdk | Java Development Kit, allows for creation, compiling and running of java source code |
 
 | Other Installed | Description |
 |-----------------|-------------|
@@ -47,12 +47,6 @@ Once the script completes feel free to delete this repo if desired.
 | .vimrc | Creates file dictating appearance and funtionality inside vim |
 | .config/starship.toml | Creates directory ~/.config/ along with starship file dictating appearance |
 
----
 
-<h1> Other Contents </h1>
 
-Repo holds config files for the following:
-Kitty Terminal Emulator
-Neovim
 
-They are *NOT* involved in the kickstart script but feel free to utilize them.
