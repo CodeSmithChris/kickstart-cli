@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Pulling the most up-to-date version of Discord from the website
+wget https://discordapp.com/api/download?platform=linux -O ~/Downloads/discord.deb
+
+# Installing updated package
+sudo dpkg -i ~/Downloads/discord.deb
+
+exit
