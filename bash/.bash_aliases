@@ -25,6 +25,9 @@ alias ln='ln -i'
 # navigation
 alias bd='cd "$OLDPWD"'
 
+# Editor
+alias vim='nvim'
+
 # version control
 alias gcommit='git commit -m'
 alias hcommit='hg commit -m'

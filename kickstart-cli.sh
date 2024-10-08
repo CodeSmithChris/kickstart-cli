@@ -126,4 +126,10 @@ echo "Configuration complete."
 chmod +x scripts/sourcer.sh
 ./scripts/sourcer.sh
 
+chmod +x bin/update-kitty
+chmod +x bin/update-nvim
+
+./bin/update-kitty
+./bin/update-nvim
+
 exit
