@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+if [ "$#" -ne 1 ]; then
+    echo "Usage: install-vircon <Vircon32 url>"
+    exit 1
+fi
+
+source_link="$1"
+compressed_file=$( echo "${source_link}" | sed 's:^.*/::g' )
+ripped=$(basename -s .tar.gz "$compressed_file")
+file_name=$( echo "ComputerSoftware-"${ripped} )
+
+sudo apt install libsdl2-dev libtinyxml2-dev libsdl2-image-dev libopengl-dev libpng-dev libopenal-dev libalut-dev libgtk2.0-dev libgtk2.0-0
+cd ~/Downloads/
+wget ${source_link}
+tar -xvf ${compressed_file}
+mkdir ${file_name}/DevelopmentTools/build/
+cd ${file_name}/DevelopmentTools/build/
+cmake -G "Unix Makefiles" ..
+make
+sudo cmake --install .
+mkdir ~/Downloads/${file_name}/DesktopEmulator/build/
+cd ~/Downloads/${file_name}/DesktopEmulator/build/
+cmake -G "Unix Makefiles" ..
+make
+sudo cmake --install .
